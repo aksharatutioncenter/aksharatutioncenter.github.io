@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Animated Login Form</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<img class="wave" src="img/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="img/bg.svg">
+		</div>
+		<div class="login-content wow bounceInUp" data-wow-duration="2s">
+			<form action="login.php" method="post">
+				<img src="img/avatar.svg">
+				<h2 class="title ">Welcome</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           		   		<input type="text" name="username" class="input">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" name="password" class="input">
+            	   </div>
+            	</div>
+            	<input type="button" class="btn" onclick="check(this.form)"  value="login">
+            </form>
+        </div>
+	</div>
+	<script language="javascript">
+		function check(form){
+			if(form.username.value =="hello" && form.password.value =="hello")
+	{
+		window.location.pathname = 'studymaterial.html'
+	}
+	else{
+		alert("this not match")
+	}
+
+		}
+	</script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script>
+    
+		var wow = new WOW(
+	{
+	  boxClass:     'wow',      // animated element css class (default is wow)
+	  animateClass: 'animated', // animation css class (default is animated)
+	  offset:       0,          // distance to the element when triggering the animation (default is 0)
+	  mobile:       true,       // trigger animations on mobile devices (default is true)
+	  live:         true,       // act on asynchronously loaded content (default is true)
+	  callback:     function(box) {
+		// the callback is fired every time an animation is started
+		// the argument that is passed in is the DOM node being animated
+	  },
+	  scrollContainer: null,    // optional scroll container selector, otherwise use window,
+	  resetAnimation: true,     // reset animation on end (default is true)
+	}
+  );
+  wow.init();
+	  </script>
+	  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	 
+</body>
+</html>
